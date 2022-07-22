@@ -1,4 +1,3 @@
-
 const express = require("express");
 const db = require("./db/connection");
 const apiRoutes = require("./routes/apiRoutes"); //automatically assumes you're looking for an 'index.js' if not specified
@@ -18,7 +17,6 @@ app.use("/api", apiRoutes); //adds the /api before every route that's now in the
 app.use((req, res) => {
     res.status(404).end();
 });
-
 
 // why this??
 db.connect(err => {
